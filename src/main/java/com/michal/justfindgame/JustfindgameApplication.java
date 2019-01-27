@@ -27,6 +27,7 @@ public class JustfindgameApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        repo.deleteAll();
         repo.save(Event.builder().missing(4).address("os.Kurdwanow 25")
                 .difficulty("medium").type("football").date(simpleDateFormat.parse("24.01.2019")).
                         hour(simpleHourFormat.parse("17:40")).description("Please bring a ball").build());
